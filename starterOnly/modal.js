@@ -30,6 +30,5 @@ function closeModal ()
   if (modalbg.style.display === "block")
   {
     modalbg.style.display = "none";
-  }
 }
 
