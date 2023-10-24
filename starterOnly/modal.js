@@ -27,8 +27,6 @@ function launchModal() {
 // close modal form
 function closeModal ()
 {
-  if (modalbg.style.display === "block")
-  {
-    modalbg.style.display = "none";
+  modalbg.style.display = "none";
 }
 
