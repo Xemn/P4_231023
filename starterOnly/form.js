@@ -26,3 +26,13 @@ function validateNumberTurnament (numberTurnament)
         throw new Error ("Ceci n'est pas une valeur correcte.");
     }
 }
+
+function getCityChoice ()
+{
+    const location = document.querySelector("form").location.value;
+
+    if (location === "")
+    {
+        throw new Error ("Une destination doit être séléctionée.")
+    }
+}
