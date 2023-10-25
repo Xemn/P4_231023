@@ -36,3 +36,13 @@ function getCityChoice ()
         throw new Error ("Une destination doit être séléctionée.")
     }
 }
+
+function validateCGU ()
+{
+    const CGU = document.getElementById("checkbox1");
+
+    if (!CGU.checked)
+    {
+        throw new Error ("Vous devez accepter les CGU.");
+    }
+}
