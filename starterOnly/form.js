@@ -33,7 +33,17 @@ function getCityChoice ()
 
     if (location === "")
     {
-        throw new Error ("Une destination doit être séléctionée.")
+        throw new Error ("Une destination doit être séléctionée.");
+    }
+}
+
+function validateDate (date)
+{
+    let regexDate = new RegExp("^((19|20)?[0-9]{2}[- .](0?[1-9]|1[012])[- .](0?[1-9]|[12][0-9]|3[01]))*$")
+
+    if(date.value = "" || !regexDate.test(date.value))
+    {
+        throw new Error ("Votre date de naissance est incorrecte.");
     }
 }
 
@@ -54,17 +64,18 @@ function validate (event)
     const firstName = document.getElementById("first");
     const lastName = document.getElementById("last");
     const email = document.getElementById("email");
+    const date = document.getElementById("birthdate");
     const numberTurnament = document.getElementById("quantity");
-
+    
 
     try {
         validateName(firstName);
         validateName(lastName);
         validateEmail(email);
         validateNumberTurnament(numberTurnament);
+        validateDate(date)
         getCityChoice();
         validateCGU();
-    
         
     } catch (error) {
         console.log(error.message);
