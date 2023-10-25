@@ -16,3 +16,13 @@ function validateEmail (email)
         throw new Error ("Ceci n'est pas une adresse mail valide.");
     }
 }
+
+function validateNumberTurnament (numberTurnament)
+{
+    let regexNumber = new RegExp("^[0-9]+$");
+
+    if (!regexNumber.test(numberTurnament.value))
+    {
+        throw new Error ("Ceci n'est pas une valeur correcte.");
+    }
+}
