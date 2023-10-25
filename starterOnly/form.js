@@ -46,3 +46,27 @@ function validateCGU ()
         throw new Error ("Vous devez accepter les CGU.");
     }
 }
+
+function validate (event)
+{
+    event.preventDefault();
+    
+    const firstName = document.getElementById("first");
+    const lastName = document.getElementById("last");
+    const email = document.getElementById("email");
+    const numberTurnament = document.getElementById("quantity");
+
+
+    try {
+        validateName(firstName);
+        validateName(lastName);
+        validateEmail(email);
+        validateNumberTurnament(numberTurnament);
+        getCityChoice();
+        validateCGU();
+    
+        
+    } catch (error) {
+        console.log(error.message);
+    }
+}
