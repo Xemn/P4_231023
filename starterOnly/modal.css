@@ -169,6 +169,11 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
+.validation
+{
+  display: block;
+}
+
 .content {
   margin: 5% auto;
   width: 100%;
@@ -527,3 +532,8 @@ footer {
   }
 }
 
+.validationModal
+{
+  background-color: blue;
+  color: green;
+}
